@@ -1,13 +1,29 @@
-var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-var LED = new Gpio(13, 'out'); //use GPIO pin 4, and specify that it is output
+
+/* ---Configuracion de pines GPIO --- */
+
+/* --- Salidas ---*/
+
+const pinExtractor = 17;
+const pinCalefaccion = 27;
+const pinLuzInt1 = 22;
+const pinLuzInt2 = 5;
+const pinLuzQuirofano = 6;
+const pinLuzExterior = 26;
 
 
+var Gpio = require('onoff').Gpio;
 
-export function writeGpio(status){
-    if(status == true){
-        LED.writeSync(1);
-    } else{
-        LED.writeSync(0);
-    }
-  
+exports.IniciarGpio = ()=>{
+    let Extractor = new Gpio(pinExtractor,'out');
+    let Calefaccion = new Gpio(pinCalefaccion,'out');
+    let LuzInt1 = new Gpio(pinLuzInt1,'out');
+    let LuzInt2 = new Gpio(pinLuzInt2,'out');
+    let LuzQuirofano = new Gpio(pinLuzQuirofano,'out');
+    let LuzExterior = new Gpio(pinLuzExterior,'out');
+    
+    console.log("Se iniciaron los GPIO")
+}
+
+exports.PinWrite = (pin, state)=>{
+    pin.writeSync(state);
 }

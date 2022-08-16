@@ -1,3 +1,8 @@
+/*
+const pinOut = require("./Gpio.js");
+pinOut.IniciarGpio();
+
+*/
 
 
 /* ---Inicializacion de servidor---*/
@@ -6,25 +11,14 @@ const express = require('express')
 const app = express();
 app.use(express.json());
 
-
 const cors = require('cors');
 app.use(cors());
 
 const port =  process.env.PORT ? process.env.PORT : 4000;
 
 var path = require('path');
-var Gpio = require('onoff').Gpio;
-var Led = new Gpio(13,'out')
 
 
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.post('/',(req, res)=>{
-    console.log(req.body)
-})
 
 /*--- Salidas GPIO ---*/
 
@@ -43,6 +37,7 @@ app.post('/outs', (req, res)=>{
 
   res.send("led ok")
 })
+app.get('/outs')
 
 
 app.listen(port, () => {

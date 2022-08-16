@@ -2,9 +2,12 @@
 
 // Funcion para escribir en los puertos GPIO
 
-function gpioWrite(state){
+function gpioWrite(name,state){
 
-    let dato = {"status": state};
+    let dato = {
+        "status": state,
+        "name": name
+};
 
     fetch("http://localhost:4000/outs",{
     method: "POST",
@@ -16,5 +19,6 @@ function gpioWrite(state){
 })
 
 }
+
+
  export{gpioWrite}
-//gpioWrite(false);

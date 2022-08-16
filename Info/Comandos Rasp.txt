@@ -1,0 +1,41 @@
+cduser: inventu
+pass: inventu
+
+sudo apt-get update // Actualizar soft
+sudo apt-get upgrade
+clear
+
+pwd // devuelve la posicion de la carpeta
+ls // lista de carpetas
+cd .. // Ir hacia atras
+mkdir + nombre // crea carpeta
+touch + nombre // Crea un archivo
+rm // elimina archivo
+rmdir // elimina un directorio
+nano // editor de codigo por consola
+
+/*****************************////
+xset q => info de configuraciones
+xset -dmps => desactiva el apagado automatico de pantalla
+xset s noblank
+xset s off
+
+/*** config definitiva para que no se apague la pantalla ****/
+/*Desde terminal*/
+sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+incluir al final del archivo las siguientes lineaspwd
+
+@xset s noblank
+@xset s off
+@xset -dpms
+
+
+
+https://mascandobits.es/programacion/mapeo-persistente-de-dispositivos-usb-en-linux/
+
+http://hogarlinux.blogspot.com/2012/06/usar-dos-ratones-en-linux-ubuntu.html
+
+https://atareao.es/podcast/teclado-raton-y-touchpad-en-linux/
+
+https://atareao.es/podcast/teclado-raton-y-touchpad-en-linux/
+/*******************Mouse*/*****************************/

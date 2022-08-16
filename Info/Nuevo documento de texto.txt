@@ -1,0 +1,24 @@
+npm install --global windows-build-tools
+https://stackoverflow.com/questions/57879150/how-can-i-solve-error-gypgyp-errerr-find-vsfind-vs-msvs-version-not-set-from-c
+
+
+Comenzar con Rspi
+/*Instalar nvm gestor desde consola*/
+
+=> sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+=> source ~/.bashrc
+
+/*Instalar NPM gestor de paquetes*/
+
+=> nvm install node
+
+/*Instalar GIT*/
+
+=> sudo apt install git
+
+
+
+/// server
+https://www.youtube.com/watch?v=T0gfQcdsn6A
+
+https://www.youtube.com/watch?v=ppiAvvkvAz0

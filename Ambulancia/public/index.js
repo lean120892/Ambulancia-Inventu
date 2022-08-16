@@ -1,22 +1,22 @@
+import{gpioWrite} from './Gpio.js'
 
 
-function gpioWrite(state){
-
-    let dato = {"status": state};
-
-    fetch("http://localhost:4000/outs",{
-    method: "POST",
-    headers:{
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(dato)
- 
-})
+function BtnOnOff (btn){
+    console.log(btn.name)
+    
 }
+/* ---Botonera--- */
 
-let betnLedState = false;
-const btnLed = document.getElementById('btnled');
-btnLed.addEventListener("click", ()=>{
-    betnLedState = ! betnLedState;
-    gpioWrite(betnLedState);
-})
+const Extractor = document.getElementById('btn-extractor');
+        Extractor.addEventListener('click',(e)=>{BtnOnOff(e.target)});
+const Calefaccion = document.getElementById('btn-calefaccion');
+        Calefaccion.addEventListener('click',(e)=>{BtnOnOff(e.target)});
+const LuzInt1 = document.getElementById('btn-luzInt1');
+        LuzInt1.addEventListener('click',(e)=>{BtnOnOff(e.target)});
+const LuzInt2 = document.getElementById('btn-luzInt2');
+        LuzInt2.addEventListener('click',(e)=>{BtnOnOff(e.target)});
+const LuzQuirofano = document.getElementById('btn-luzQuirofano');
+        LuzQuirofano.addEventListener('click',(e)=>{BtnOnOff(e.target)});
+const LuzExterior = document.getElementById('btn-luzExterior');
+        LuzExterior.addEventListener('click',(e)=>{BtnOnOff(e.target)});
+

@@ -5,14 +5,22 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
 
-    <title>Hello World!</title>
+    <title>Inventu App</title>
   </head>
   <body>
-    <h1>Ambulancia Inventu!!</h1>
-     <hr>
-    <h2>Encender/Apagar LED</h2>
-    <button id="btnled">LED</button>
-
+    <div class="semaforo">
+      <button id="semaforoRojo"></button>
+      <button id="semaforoAmarillo"></button>
+      <button id="semaforoVerde"></button>
+    </div>
+    <div class="botonera">
+      <button class="btn" id="btn-extractor" name="Extractor">LED</button>
+      <button class="btn" id="btn-calefaccion" name="Calefaccion">LED</button>
+      <button class="btn" id="btn-luzInt1" name="LuzInt1">LED</button>
+      <button class="btn" id="btn-luzInt2" name="LuzInt2">LED</button>
+      <button class="btn" id="btn-luzQuirofano" name="LuzQuirofano">LED</button>
+      <button class="btn" id="btn-luzExterior" name="LuzExterior">LED</button>
+    </div>
     <script   src="index.js" type = "module"></script>
   </body>
 </html>
