@@ -2,25 +2,10 @@ import{gpioWrite} from './Gpio.js'
 
 
 function BtnOnOff (btn){
-        
-        gpioWrite(btn.name)
-                .then(res=> res.json())
-                .then(data=> ActualizarEstadoBoton (btn.id, data.state))
-        
+    console.log(btn.name)
+    gpioWrite(btn.name)
     
 }
-
-function ActualizarEstadoBoton (idBoton, info) {
-        
-        let boton = document.getElementById(idBoton)
-       
-        if (info == "1"){
-                boton.lastChild.classList.add('btn-status-on')
-        }else{
-                boton.lastChild.classList.remove('btn-status-on')
-        }
-}
-
 /* ---Botonera--- */
 
 const Extractor = document.getElementById('btn-extractor');
@@ -36,5 +21,3 @@ const LuzQuirofano = document.getElementById('btn-luzQuirofano');
 const LuzExterior = document.getElementById('btn-luzExterior');
         LuzExterior.addEventListener('click',(e)=>{BtnOnOff(e.target)});
 
-   //Extractor.div.classList.add ('btn-status-on');
-  // console.log(Extractor.lastChild.classList.add('btn-status-on'))

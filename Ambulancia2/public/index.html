@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+
+    <title>Inventu App</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+  </head>
+  <body>
+    <div class="semaforo">
+      <button id="semaforoRojo"></button>
+      <button id="semaforoAmarillo"></button>
+      <button id="semaforoVerde"></button>
+    </div>
+    <div class="botonera">
+      <button class="btn" id="btn-extractor" name="Extractor">Extractor <div class="btn-status"></div></button>
+      <button class="btn" id="btn-calefaccion" name="Calefaccion">Calefacción <div class="btn-status"></div></button>
+      <button class="btn" id="btn-luzInt1" name="LuzInt1"> Luz Interior <div class="btn-status"></div></button>
+      <button class="btn" id="btn-luzInt2" name="LuzInt2">Luz Interior 2 <div class="btn-status"></div></button>
+      <button class="btn" id="btn-luzQuirofano" name="LuzQuirofano">Quirofano <div class="btn-status"></div></button>
+      <button class="btn " id="btn-luzExterior" name="LuzExterior">Luz exterior <div class="btn-status"></div></button>
+    </div>
+    <script   src="index.js" type = "module"></script>
+  </body>
+</html>

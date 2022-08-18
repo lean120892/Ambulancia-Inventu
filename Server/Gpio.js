@@ -1,6 +1,8 @@
 
 /* ---Configuracion de pines GPIO --- */
 
+/* ---Configuracion de pines GPIO --- */
+
 /* --- Salidas ---*/
 
 const pinExtractor = 17;
@@ -12,18 +14,44 @@ const pinLuzExterior = 26;
 
 
 var Gpio = require('onoff').Gpio;
+    let Extractor 
+    let Calefaccion 
+    let LuzInt1 
+    let LuzInt2 
+    let LuzQuirofano 
+    let LuzExterior
 
 exports.IniciarGpio = ()=>{
-    let Extractor = new Gpio(pinExtractor,'out');
-    let Calefaccion = new Gpio(pinCalefaccion,'out');
-    let LuzInt1 = new Gpio(pinLuzInt1,'out');
-    let LuzInt2 = new Gpio(pinLuzInt2,'out');
-    let LuzQuirofano = new Gpio(pinLuzQuirofano,'out');
-    let LuzExterior = new Gpio(pinLuzExterior,'out');
+     Extractor = new Gpio(pinExtractor,'out');
+     Calefaccion = new Gpio(pinCalefaccion,'out');
+     LuzInt1 = new Gpio(pinLuzInt1,'out');
+     LuzInt2 = new Gpio(pinLuzInt2,'out');
+     LuzQuirofano = new Gpio(pinLuzQuirofano,'out');
+     LuzExterior = new Gpio(pinLuzExterior,'out');
     
     console.log("Se iniciaron los GPIO")
 }
 
 exports.PinWrite = (pin)=>{
-    pin.writeSync(pin.readSync() ^ 1);
+  
+  switch (pin){
+      case 'Extractor':
+      Extractor.writeSync(Extractor.readSync()^1);
+      break;
+      case 'Calefaccion':
+      Calefaccion.writeSync(Calefaccion.readSync()^1);
+      break;
+      case 'LuzInt1':
+      LuzInt1.writeSync(LuzInt1.readSync()^1);
+      break;
+      case 'LuzInt2':
+      LuzInt2.writeSync(LuzInt2.readSync()^1);
+      break;
+      case 'LuzQuirofano':
+      LuzQuirofano.writeSync(LuzQuirofano.readSync()^1);
+      break;
+      case 'LuzExterior':
+      LuzExterior.writeSync(LuzExterior.readSync()^1);
+      break;
+  }
 }
