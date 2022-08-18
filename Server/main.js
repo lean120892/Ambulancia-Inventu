@@ -24,16 +24,9 @@ var path = require('path');
 
 app.post('/outs', (req, res)=>{
 
-  if(req.body.status == true){
-    console.log("Encender Led")
-    //writeGpio(req.body.status)
-    //console.log(req.body.status)
-  }
-  if(req.body.status == false){
-    console.log("Apagar Led")
-    //writeGpio(req.body.status)
-    console.log(req.body.status)
-  }
+  let pinName = req.body.name;
+  let status = req.body.status;
+ // pinOut.PinWrite(pinName)
 
   res.send("led ok")
 })
@@ -43,3 +36,19 @@ app.get('/outs')
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+
+/**
+ * 
+ * 
+ *   if(req.body.status == true){
+    console.log("Encender Led")
+    //writeGpio(req.body.status)
+    //console.log(req.body.status)
+  }
+  if(req.body.status == false){
+    console.log("Apagar Led")
+    //writeGpio(req.body.status)
+    console.log(req.body.status)
+  }
+ */

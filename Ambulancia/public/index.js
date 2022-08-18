@@ -3,6 +3,7 @@ import{gpioWrite} from './Gpio.js'
 
 function BtnOnOff (btn){
     console.log(btn.name)
+    gpioWrite(btn.name)
     
 }
 /* ---Botonera--- */

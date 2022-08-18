@@ -24,6 +24,6 @@ exports.IniciarGpio = ()=>{
     console.log("Se iniciaron los GPIO")
 }
 
-exports.PinWrite = (pin, state)=>{
-    pin.writeSync(state);
+exports.PinWrite = (pin)=>{
+    pin.writeSync(pin.readSync() ^ 1);
 }
