@@ -27,6 +27,7 @@ app.post('/outs', (req, res)=>{
   let pinName = req.body.name;
   let status = pinOut.PinWrite(pinName)
 */
+console.log(req.body.name)
  let status = 1
 
   res.send({state: status})
