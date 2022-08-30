@@ -1,9 +1,8 @@
-/*
+
 const pinOut = require("./Gpio.js");
 pinOut.IniciarGpio();
 
-*/
-
+const Pwm = require("./Pwm.js");
 
 /* ---Inicializacion de servidor---*/
 
@@ -17,23 +16,27 @@ app.use(cors());
 const port =  process.env.PORT ? process.env.PORT : 4000;
 
 var path = require('path');
+const { pwmOut } = require('./pwm');
 
 
 
 /*--- Salidas GPIO ---*/
 
 app.post('/outs', (req, res)=>{
-/*
+
   let pinName = req.body.name;
   let status = pinOut.PinWrite(pinName)
-*/
-console.log(req.body.name)
- let status = 1
-
   res.send({state: status})
   
 })
-app.get('/outs')
+
+/*--- Salidas PWM ---*/
+app.post('/pwm', (req, res)=>{
+  let pinName = req.body.name;
+  let value = req.body.value;
+  Pwm.pwmOut(pinName,value);
+    
+  })
 
 
 app.listen(port, () => {

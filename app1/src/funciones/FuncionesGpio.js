@@ -16,5 +16,21 @@ const  gpioWrite = async (name,state)=>{
 
 }
 
+const gpioPwm = async(name, value) =>{
 
- export{gpioWrite}
+    let dato ={
+        "name" : name,
+        "value": value
+    }
+    return fetch("http://localhost:4000/pwm",{
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dato)
+     
+    })
+}
+
+
+ export{gpioWrite, gpioPwm}

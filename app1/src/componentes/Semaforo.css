@@ -1,0 +1,50 @@
+.cuerpo-semaforo{
+
+    border: 1px solid white;
+    width: 180px;
+    height: 400px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+    justify-items: center;
+    background-color: slategrey;
+}
+
+.luz{
+    width: 150px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+.visera-semaforo{
+    border: 1px solid white;
+    width: 100px;
+    height: 25px;
+    border-top-left-radius:50% ;
+    border-top-right-radius:50% ;
+    background-color: rgba(32, 28, 28, 0.452);
+}
+.lampara-semaforo{
+    
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.luz-roja{
+    background-color: rgba(228, 22, 22, 0.781);
+    border: 1.5px solid rgb(250, 7, 7);
+}
+.luz-amarilla{
+    background-color:rgb(196, 196, 25);
+    border: 1.5px solid rgb(241, 226, 5);
+}
+.luz-verde{
+    background-color:rgb(17, 170, 17);
+    border: 1.5px solid rgb(5, 209, 56);
+}
